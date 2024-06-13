@@ -3,6 +3,9 @@ import { Button } from "./components/ui/button";
 import { Navbar } from "./components/Navbar";
 import { CTA } from "./components/CTA";
 import { Header } from "./components/Header";
+import { Home } from "./pages/Home";
+import { Footer } from "./components/Footer";
+import { ServicesBanner } from "./components/ServicesBanner";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
       <Navbar />
       <CTA />
       <Header></Header>
+      <Home></Home>
+      <Footer></Footer>
+      <ServicesBanner></ServicesBanner>
     </div>
   );
 }

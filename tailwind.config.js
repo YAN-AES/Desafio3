@@ -17,7 +17,9 @@ module.exports = {
       },
     },
     extend: {
-      
+      fontFamily: {
+        poppins: 'var(--poppins)',
+      },
       colors: {
         gray1: "#333333",
         gray2: "#666666",

@@ -20,14 +20,17 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         banana: "bg-yellow-600 ",
         cta: "text-base bg-brown2 font-poppins font-bold text-white1",
-        subscribe: "bg-transparent border-b-black border-[2px] outline-none shadow-none rounded-none"
+        subscribe: "bg-transparent border-b-[2px] border-black outline-none shadow-none ring-transparent rounded-none",
+        transparent: "bg-transparent",
+        footer: "bg-white rounded-full shadow-md"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
-        cta: "px-16 py-6 rounded-none"
+        cta: "px-16 py-6 rounded-none",
+        subscribe: "h-8"
       },
     },
     defaultVariants: {

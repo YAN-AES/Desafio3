@@ -1,5 +1,9 @@
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import FacebookIcon from "../assets/facebookicon.png";
+import InstagramIcon from "../assets/instagramicon.png";
+import LinkedinIcon from "../assets/linkedinicon.png";
+import TwitterIcon from "../assets/twittericon.png";
 
 export function Footer() {
   return (
@@ -14,10 +18,10 @@ export function Footer() {
             FL 33134 USA
           </p>
           <div className="flex gap-4">
-            <Button size="icon"></Button>
-            <Button size="icon"></Button>
-            <Button size="icon"></Button>
-            <Button size="icon"></Button>
+            <Button size="icon" variant="footer"><img src={FacebookIcon} alt="" /></Button>
+            <Button size="icon" variant="footer"><img src={InstagramIcon} alt="" /></Button>
+            <Button size="icon" variant="footer"><img src={TwitterIcon} alt="" /></Button>
+            <Button size="icon" variant="footer"><img src={LinkedinIcon} alt="" /></Button>
           </div>
         </div>
         <div className="flex flex-col gap-12">
@@ -40,8 +44,10 @@ export function Footer() {
         <div className="flex flex-col gap-12">
           <p className="text-gray3 font-medium">Newsletter</p>
           <div className="flex flex-row gap-3 ">
-            <Input placeholder="Enter Your Email Adress"></Input>
-            <Button variant="subscribe">SUBSCRIBE</Button>
+            <Input placeholder="Enter Your Email Adress" className="border-b-black border-b-[2px] border-x-0 border-t-0 rounded-none h-8 font-poppins placeholder:font-poppins p-0"></Input>
+            <Button variant="subscribe" size="subscribe">
+              SUBSCRIBE
+            </Button>
           </div>
         </div>
       </div>

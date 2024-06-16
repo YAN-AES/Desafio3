@@ -39,8 +39,9 @@ export function ShoppingCartButton() {
           </Button>
         </SheetTrigger>
         <SheetContent className="flex flex-col p-0 bg-red-300 border-none h-svh max-h-svh">
-          <SheetHeader>
-            <SheetTitle>Shopping Cart</SheetTitle>
+          <SheetHeader className="flex items-start justify-between pl-8 pt-7 h-24">
+            <SheetTitle className="font-poppins font-semibold text-2xl">Shopping Cart</SheetTitle>
+            <div className="w-72 h-[1px] bg-gray3"></div>
           </SheetHeader>
 
           <ShoppingCartContent />

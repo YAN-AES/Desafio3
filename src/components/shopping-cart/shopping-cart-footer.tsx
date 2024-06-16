@@ -14,22 +14,25 @@ export function ShoppingCartFooter() {
   // }
 
   return (
-    <div className='flex flex-row w-full gap-2 p-2 justify-evenly bg-emerald-600'>
+    <div className='flex flex-row w-full gap-2 p-2 justify-evenly py-7 border-t-[1px] border-t-gray3'>
       <Button
         className='w-full'
-        variant="outline"
+        variant="shoppingcart"
+        size="shoppingcart"
       >
         Cart
       </Button>
       <Button
         className='w-full'
-        variant="outline"
+        variant="shoppingcart"
+        size="shoppingcart"
       >
         Checkout
       </Button>
       <Button
         className='w-full'
-        variant="outline"
+        variant="shoppingcart"
+        size="shoppingcart"
       >
         Comparison
       </Button>

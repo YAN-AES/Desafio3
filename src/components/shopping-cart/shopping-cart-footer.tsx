@@ -4,17 +4,16 @@
 import { Button } from '@/components/ui/button';
 
 //* Hooks imports
-// import { useShoppingCart } from '@/hooks/use-shopping-cart';
+import { useShoppingCart } from '@/hooks/use-shopping-cart';
 
 export function ShoppingCartFooter() {
-  // const shoppingCart = useShoppingCart();
-
-  // const handleClearCart = () => {
-  //   shoppingCart.clearCart();
-  // }
+  const shoppingCart = useShoppingCart();
 
   return (
     <div className='flex flex-row w-full gap-2 p-2 justify-evenly py-7 border-t-[1px] border-t-gray3'>
+      <div>
+        {shoppingCart.total}
+      </div>
       <Button
         className='w-full'
         variant="shoppingcart"

@@ -2,12 +2,18 @@ import Dining from "../assets/dining.jpg";
 import Living from "../assets/living.jpg";
 import Bedroom from "../assets/bedroom.jpg";
 import Furniturebg from "../assets/furniturebg.jpg";
+import Homebg from "@/assets/homebg.jpg"
 import { Navbar } from "@/components/Navbar";
+import { CTA } from "@/components/CTA";
 
 export function Home() {
   return (
     <main className="">
       <Navbar></Navbar>
+      <section>
+        <img src={Homebg} />
+        <CTA />
+      </section>
       <section className="flex flex-col py-14 gap-14">
         <div className="font-poppins flex flex-col items-center justify-center">
           <p className="font-bold text-4xl">Browse The Range</p>

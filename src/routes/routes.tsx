@@ -9,7 +9,7 @@ import { Checkout } from "@/pages/checkout";
 
 const routers = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <Home />,
   },
   {

@@ -9,6 +9,7 @@ import { Home } from "@/pages/Home";
 import { Product } from "@/pages/Product";
 import { Design } from "@/pages/Design";
 import { Checkout } from "@/pages/checkout";
+import { Contact } from "@/pages/contact";
 
 const routers = createBrowserRouter([
   {
@@ -28,8 +29,12 @@ const routers = createBrowserRouter([
         element: <Design />,
       },
       {
-        path: "/checkout",
+        path: "checkout",
         element: <Checkout />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       }
     ]
   },

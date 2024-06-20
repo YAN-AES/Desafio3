@@ -206,10 +206,12 @@ export function CheckoutForm() {
         </div>
       </div>
 
-      <div className="w-full col-span-1 bg-red-900">
+      <div className="w-full col-span-1 flex flex-col items-center">
         <CheckoutDetails />
         <Button
           type="submit"
+          variant="placeorder"
+          size="placeorder"
           disabled={checkout.isPending}
         >
           Place Order
@@ -237,7 +239,7 @@ function CheckoutDetails() {
   });
 
   return (
-    <div className="flex flex-col items-center w-full gap-6 pt-12 bg-red-500">
+    <div className="flex flex-col items-center w-full gap-6 pt-12">
       <div className="flex flex-row items-center justify-between w-full text-2xl font-medium">
         <span>Products</span>
         <span>Subtotal</span>

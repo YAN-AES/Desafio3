@@ -10,6 +10,7 @@ import { Product } from "@/pages/Product";
 import { Design } from "@/pages/Design";
 import { Checkout } from "@/pages/checkout";
 import { Contact } from "@/pages/contact";
+import { Login } from "@/pages/login/Login";
 
 const routers = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const routers = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "login",
+        element: <Login />,
       }
     ]
   },

@@ -25,7 +25,8 @@ const buttonVariants = cva(
         footer: "bg-white rounded-full shadow-md",
         shoppingcart: "bg-transparent border border-black font-poppins",
         placeorder: "bg-transparent border border-black font-poppins text-xl",
-        submit: "bg-brown2 border-none text-white font-poppins text-base font-normal"
+        submit: "bg-brown2 border-none text-white font-poppins text-base font-normal",
+        login: "bg-beige2 shadow-md font-poppins text-xl"
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -36,7 +37,8 @@ const buttonVariants = cva(
         subscribe: "h-8",
         shoppingcart: "px-7 py-1.5 rounded-full",
         placeorder: "px-24 py-4 rounded-2xl",
-        submit: "px-24 py-4 rounded-md"
+        submit: "px-24 py-4 rounded-md",
+        login: "rounded-md gap-3 justify-start px-[75px] py-4"
       },
     },
     defaultVariants: {

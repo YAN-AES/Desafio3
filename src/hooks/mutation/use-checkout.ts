@@ -4,9 +4,34 @@ import z from "zod";
 
 //* Schemas imports
 import { addressSchema } from "@/schemas/address";
+import { productSchema } from "@/schemas/product";
 
 export const checkoutSchema = z
   .object({
+    items: z
+      .array(
+        z.object({
+          id: productSchema.shape.id,
+          quantity: z
+            .number({
+              message: "Quantity is required",
+              invalid_type_error: "Quantity must be a number",
+              required_error: "Quantity is required",
+            })
+            .min(1, {
+              message: "Quantity must be at least 1",
+            })
+        }), {
+        message: "Items are required",
+        invalid_type_error: "Items must be an array",
+        required_error: "Items are required",
+      })
+      .min(1, {
+        message: "Items must have at least 1 item",
+      })
+      .max(100, {
+        message: "Items must have at most 100 items",
+      }),
     firstName: z
       .string({
         message: "First Name is required",

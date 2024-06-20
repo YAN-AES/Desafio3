@@ -13,7 +13,7 @@ export function Navbar() {
           </div>
           <p className="text-4xl font-bold">Furniro</p>
         </div>
-        <ul className="flex flex-row items-center text-base gap-x-20">
+        <ul className="flex flex-row items-center justify-between text-base w-full max-w-[480px]">
           <li className="transition ease-in-out cursor-pointer hover:scale-105">
             Home
           </li>

@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 export function ContactForm() {
   return (
     <form action="" className="w-full">
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 items-start">
         <div className="flex flex-col w-full gap-5">
           <Label>Your name</Label>
           <Input className="h-12 font-medium font-poppins border-gray3 placeholder:font-poppins placeholder:font-normal" placeholder="Abc"></Input>

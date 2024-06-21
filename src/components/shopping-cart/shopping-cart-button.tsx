@@ -25,10 +25,12 @@ import CartIcon from "@/assets/carticon.png";
 
 //* Hooks imports
 import { useMediaQuery } from "@/hooks/common/use-media-query";
+import { useShoppingCart } from "@/hooks/use-shopping-cart";
 
 export function ShoppingCartButton() {
   const [open, setOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
+  const shoppingCart = useShoppingCart();
 
   if (isDesktop) {
     return (
@@ -38,13 +40,20 @@ export function ShoppingCartButton() {
             <img src={CartIcon} />
           </Button>
         </SheetTrigger>
-        <SheetContent className="flex flex-col p-0 bg-red-300 border-none h-svh max-h-svh">
+        <SheetContent className="flex flex-col p-0 border-none h-svh max-h-svh">
           <SheetHeader className="flex items-start justify-between pl-8 pt-7 h-24">
-            <SheetTitle className="font-poppins font-semibold text-2xl">Shopping Cart</SheetTitle>
+            <SheetTitle className="font-poppins font-semibold text-2xl">
+              Shopping Cart
+            </SheetTitle>
             <div className="w-72 h-[1px] bg-gray3"></div>
           </SheetHeader>
 
           <ShoppingCartContent />
+
+          <div className="flex flex-row w-full items-center justify-between px-4 font-poppins">
+            <span>Subtotal</span>
+            <span className="font-semibold text-brown2">Rs. {shoppingCart.total}</span>
+          </div>
 
           <SheetFooter className="p-0">
             <ShoppingCartFooter />
@@ -61,7 +70,7 @@ export function ShoppingCartButton() {
           <img src={CartIcon} />
         </Button>
       </DrawerTrigger>
-      <DrawerContent className="flex flex-col p-0 bg-red-300 border-none h-svh max-h-[75svh]">
+      <DrawerContent className="flex flex-col p-0 border-none h-svh max-h-[75svh]">
         <DrawerHeader className="text-left">
           <DrawerTitle>Shopping Cart</DrawerTitle>
         </DrawerHeader>

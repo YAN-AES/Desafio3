@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 export function CTA() {
   return (
@@ -14,7 +15,7 @@ export function CTA() {
           elit tellus, luctus nec ullamcorper mattis.
         </p>
       </div>
-      <Button variant="cta" size="cta">BUY NOW</Button>
+      <Button variant="cta" size="cta"><Link to="/error">BUY NOW</Link></Button>
     </div>
   );
 }

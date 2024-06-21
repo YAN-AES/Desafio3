@@ -2,7 +2,7 @@
 import { ShoppingCartButton } from "@/components/shopping-cart";
 import { Button } from "@/components/ui/button";
 
-import { ProducCard } from "@/components/Card";
+import { ProductCard } from "@/components/Card";
 
 //* Hooks imports
 import { useShoppingCart, type CartItem } from "@/hooks/use-shopping-cart";
@@ -54,10 +54,10 @@ export function Design() {
         </Button>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center w-full gap-2">
+      <div className="flex flex-wrap items-center justify-center max-w-[1280px] w-full gap-2">
         {
           products.data?.map((product)=>{
-            return <ProducCard key={product.id} product={product} />;
+            return <ProductCard key={product.id} product={product} />;
           })
         }
       </div>

@@ -24,7 +24,7 @@ export function Header() {
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem className="font-semibold">
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                <BreadcrumbLink href="/home">Home</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>

@@ -10,11 +10,16 @@ import type { Product } from "@/schemas/product";
 //* Hooks imports
 import { useShoppingCart } from "@/hooks/use-shopping-cart";
 
+//* Images imports
+import ShareIcon from "@/assets/share-icon.svg";
+import CompareIcon from "@/assets/compare-icon.svg"
+import LikeIcon from "@/assets/like-icon.svg"
+
 type ProductCardProps = {
   product: Product;
 }
 
-export function ProducCard(props: ProductCardProps) {
+export function ProductCard(props: ProductCardProps) {
   const shoppingCart = useShoppingCart();
 
   const url = `/product/${props.product.id}`;
@@ -37,7 +42,7 @@ export function ProducCard(props: ProductCardProps) {
 
   return (
     <div
-      className="w-[285px] h-[446px] font-poppins bg-red-600 flex flex-col justify-start items-center group relative"
+      className="w-[285px] h-[446px] font-poppins bg-gray5 flex flex-col justify-start items-center group relative"
     >
       {
         discount > 0 &&
@@ -59,13 +64,13 @@ export function ProducCard(props: ProductCardProps) {
       />
 
       <div
-        className="hidden group-hover:flex flex-col z-[11] absolute top-1/2 left-1/2 items-center justify-center -translate-x-1/2 -translate-y-1/2"
+        className="hidden group-hover:flex flex-col z-[11] absolute gap-4 top-1/2 left-1/2 items-center justify-center -translate-x-1/2 -translate-y-1/2"
       >
-        <Button onPointerDown={handleAddToCart}>Add to cart</Button>
-        <div className="flex flex-row justify-between bg-red-600">
-          <Button variant="transparent">Share</Button>
-          <Button variant="transparent">Compare</Button>
-          <Button variant="transparent">Like</Button>
+        <Button onPointerDown={handleAddToCart} variant="card" size="card">Add to cart</Button>
+        <div className="flex flex-row justify-between">
+          <Button variant="transparent" className="gap-1 text-white"><img src={ShareIcon} alt="" />Share</Button>
+          <Button variant="transparent" className="gap-1 text-white"><img src={CompareIcon} alt="" />Compare</Button>
+          <Button variant="transparent" className="gap-1 text-white"><img src={LikeIcon} alt="" />Like</Button>
         </div>
       </div>
 
@@ -76,14 +81,14 @@ export function ProducCard(props: ProductCardProps) {
           className="object-cover w-full h-full"
         />
       </AspectRatio>
-      <div className="flex flex-col w-full h-full bg-green-600">
-        <span>{props.product.name}</span>
+      <div className="flex flex-col w-full h-full gap-2 justify-between py-2.5 px-4 bg-gray6">
+        <span className="font-semibold text-shadow text-2xl">{props.product.name}</span>
         <span>{props.product.description}</span>
-        <span>
-          <span>{price}</span>
+        <span className=" flex flex-row gap-3 items-center">
+          <span className="font-semibold text-shadow text-xl">Rp {price}</span>
           {
             discount > 0 &&
-            <span className="line-through">{props.product.price}</span>
+            <span className="line-through text-gray7">Rp {props.product.price}</span>
           }
         </span>
       </div>

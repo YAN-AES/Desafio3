@@ -3,6 +3,7 @@ import Logo from "@/assets/logo2.png";
 import Bg from "@/assets/homebg.jpg";
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function Error() {
   return (
@@ -30,7 +31,7 @@ export function Error() {
               <img src={ErrorImg} alt="" className="w-full" />
             </div>
           </div>
-          <Button>Home</Button>
+          <Button variant="submit" size="submit"><Link to="/home">Home</Link></Button>
         </div>
       </section>
     </main>

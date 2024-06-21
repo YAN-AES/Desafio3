@@ -13,7 +13,7 @@ export function ShoppingCartContent() {
   }
 
   return (
-    <ScrollArea className="w-full h-full max-h-full bg-slate-400">
+    <ScrollArea className="w-full h-full max-h-full">
       <ul className="flex flex-col w-full pr-2">
         {
           shoppingCart.cart?.map((item) => {

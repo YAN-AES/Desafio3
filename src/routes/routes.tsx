@@ -11,6 +11,8 @@ import { Design } from "@/pages/Design";
 import { Checkout } from "@/pages/checkout";
 import { Contact } from "@/pages/contact";
 import { Login } from "@/pages/login/Login";
+import { Shop } from "@/pages/Shop";
+import { Error } from "@/pages/Error";
 
 const routers = createBrowserRouter([
   {
@@ -40,6 +42,14 @@ const routers = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "shop",
+        element: <Shop />,
+      },
+      {
+        path: "error",
+        element: <Error />,
       }
     ]
   },

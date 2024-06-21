@@ -18,8 +18,8 @@ export function ShoppingCartCard(props: ShoppingCartCardProps) {
   const handleRemove = () => onRemove(item);
 
   return (
-    <li className="flex flex-row w-full">
-      <div className="w-24 bg-emerald-600">
+    <li className="flex flex-row w-full pl-5">
+      <div className="w-24">
         <AspectRatio ratio={1}>
           <img
             src={item.image}
@@ -28,8 +28,8 @@ export function ShoppingCartCard(props: ShoppingCartCardProps) {
           />
         </AspectRatio>
       </div>
-      <div className="flex flex-row flex-1 bg-blue-300">
-        <div className="flex flex-col flex-1 bg-yellow-300 font-poppins pl-5 justify-center gap-3">
+      <div className="flex flex-row flex-1">
+        <div className="flex flex-col flex-1 font-poppins pl-5 justify-center gap-3">
           <span>{item.name}</span>
           <div className="flex flex-row gap-3 items-center">
             <span>{item.quantity}</span>

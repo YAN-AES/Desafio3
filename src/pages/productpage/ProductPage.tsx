@@ -6,6 +6,8 @@ import LinkedinIcon from "@/assets/linkedinicon.png";
 import TwitterIcon from "@/assets/twittericon.png";
 import { Counter } from "@/components/Counter";
 import { ProductHeader } from "@/components/ProductHeader";
+import { Size } from "./size-toggle";
+import { Color } from "./color-toggle";
 
 export function ProductPage() {
   return (
@@ -16,7 +18,9 @@ export function ProductPage() {
           <div className="bg-red-500 w-full h-11"></div>
           <div className="flex flex-col items-start gap-5 py-8 px-6">
             <span className="text-5xl">Asgaard sofa</span>
-            <span className="font-medium text-gray3 text-2xl">Rs. 250.000,00</span>
+            <span className="font-medium text-gray3 text-2xl">
+              Rs. 250.000,00
+            </span>
             <div className="flex flex-row gap-5 items-center justify-center text-gray3">
               <div className="h-7 w-[1px] bg-gray3"></div>
               <span className="text-xs">X Customer Review</span>
@@ -27,9 +31,19 @@ export function ProductPage() {
               audio which boasts a clear midrange and extended highs for a
               sound.
             </span>
+            <div className="flex flex-col items-start justify-center gap-4">
+              <span className="font-normal text-sm text-gray3">Size</span>
+              <Size />
+            </div>
+            <div className="flex flex-col items-start justify-center gap-4">
+              <span className="font-normal text-sm text-gray3">Color</span>
+              <Color />
+            </div>
             <div className="flex flex-row items-center justify-center gap-4">
               <Counter></Counter>
-              <Button variant="productpage" size="productpage">Add To Cart</Button>
+              <Button variant="productpage" size="productpage">
+                Add To Cart
+              </Button>
             </div>
             <div className="h-[1px] w-full bg-gray3"></div>
             <div className="flex flex-row gap-5 text-gray3">
@@ -45,9 +59,15 @@ export function ProductPage() {
                 <span>: Test</span>
                 <div className="flex flex-row items-center justify-center h-5">
                   <span>: </span>
-                  <Button variant="transparent" size="icon"><img src={FacebookIcon} /></Button>
-                  <Button variant="transparent" size="icon"><img src={LinkedinIcon} /></Button>
-                  <Button variant="transparent" size="icon"><img src={TwitterIcon} /></Button>
+                  <Button variant="transparent" size="icon">
+                    <img src={FacebookIcon} />
+                  </Button>
+                  <Button variant="transparent" size="icon">
+                    <img src={LinkedinIcon} />
+                  </Button>
+                  <Button variant="transparent" size="icon">
+                    <img src={TwitterIcon} />
+                  </Button>
                 </div>
               </div>
             </div>

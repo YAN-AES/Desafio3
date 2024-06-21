@@ -3,6 +3,7 @@ import { createStore } from 'redux';
 
 //* Reducers imports
 import { shoppingCartReducer, type ShoppingCartAction, type ShoppingCartState } from "./shopping-cart/reducer";
+import { authReducer, type AuthAction, type AuthState } from "./auth/reducer";
 
 type CounterState = {
   value: number
@@ -32,7 +33,8 @@ export function counterReducer(state: CounterState | undefined, action: CounterA
 
 type RootState = {
   counter: CounterState,
-  shoppingCart: ShoppingCartState
+  shoppingCart: ShoppingCartState,
+  auth: AuthState
 }
 
 type RootAction = CounterAction | ShoppingCartAction;
@@ -40,7 +42,8 @@ type RootAction = CounterAction | ShoppingCartAction;
 export function rootReducer(state: RootState | undefined, action: RootAction) {
   return {
     counter: counterReducer(state?.counter, action as CounterAction),
-    shoppingCart: shoppingCartReducer(state?.shoppingCart, action as ShoppingCartAction)
+    shoppingCart: shoppingCartReducer(state?.shoppingCart, action as ShoppingCartAction),
+    auth: authReducer(state?.auth, action as AuthAction)
   }
 }
 

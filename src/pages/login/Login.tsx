@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 
 import { Button } from "@/components/ui/button";
-import { LoginForm } from "./form";
+import { AuthForms } from "./form";
 
 import Logo from "@/assets/logo.png";
 import FacebookIcon from "@/assets/facebook-logo.png"
@@ -25,8 +25,8 @@ export function Login() {
 
   return (
     <main>
-      <section className="flex flex-col items-center justify-center w-full max-h-svh h-full py-20">
-        <div className=" flex flex-col font-poppins items-center justify-center gap-4">
+      <section className="flex flex-col items-center justify-center w-full h-full py-20 max-h-svh">
+        <div className="flex flex-col items-center justify-center gap-4 font-poppins">
           <div className="flex flex-row items-center justify-center">
             <div>
               <img src={Logo} alt="" />
@@ -34,10 +34,14 @@ export function Login() {
             <span className="text-4xl font-bold">Furniro</span>
           </div>
           <span className="font-semibold">Choose a login option:</span>
-          <LoginForm />
+          <AuthForms />
           <div className="flex flex-col gap-5">
-            <Button onClick={handleGoogle} variant="login" size="login"><img src={GoogleLogo} alt="" className="w-8"/>Login with Google</Button>
-            <Button onClick={handleFacebook} variant="login" size="login"><img src={FacebookIcon} alt="" className="w-8"/>Login with Facebook</Button>
+            <Button onPointerDown={handleGoogle} variant="login" size="login">
+              <img src={GoogleLogo} alt="" className="w-8" />Login with Google
+            </Button>
+            <Button onPointerDown={handleFacebook} variant="login" size="login">
+              <img src={FacebookIcon} alt="" className="w-8" />Login with Facebook
+            </Button>
           </div>
         </div>
       </section>

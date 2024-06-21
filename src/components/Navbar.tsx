@@ -1,6 +1,10 @@
+//* Libraries imports
+import { Link } from "react-router-dom";
+
+//* Local imports
 import { Button } from "./ui/button";
 import Logo from "../assets/logo2.png";
-import ProfileIcon from "../assets/profileicon.png";
+import ProfileIcon from "@/assets/profileicon.png";
 import { ShoppingCartButton } from "./shopping-cart";
 
 export function Navbar() {
@@ -15,16 +19,24 @@ export function Navbar() {
         </div>
         <ul className="flex flex-row items-center justify-between text-base w-full max-w-[480px]">
           <li className="transition ease-in-out cursor-pointer hover:scale-105">
-            Home
+            <Link to="/">
+              Home
+            </Link>
           </li>
           <li className="transition ease-in-out cursor-pointer hover:scale-105">
-            Shop
+            <Link to="/">
+              Shop
+            </Link>
           </li>
           <li className="transition ease-in-out cursor-pointer hover:scale-105">
-            About
+            <Link to="/">
+              About
+            </Link>
           </li>
           <li className="transition ease-in-out cursor-pointer hover:scale-105">
-            Contact
+            <Link to="/">
+              Contact
+            </Link>
           </li>
         </ul>
         <div className="flex flex-row items-center gap-9">

@@ -10,7 +10,11 @@ import {
 import Logo from "../assets/logo2.png";
 import Bg from "@/assets/headerbg.jpg";
 
-export function Header() {
+type Props = {
+  title: string;
+}
+
+export function Header(props: Props) {
   return (
     <header className="w-full">
       <div className="flex flex-col w-full relative items-center justify-center h-[316px] gap-4">
@@ -20,7 +24,7 @@ export function Header() {
         />
         <div className="z-[1] flex flex-col items-center justify-center gap-4">
           <img src={Logo} alt="" />
-          <h1 className="font-poppins font-medium text-5xl">Shop</h1>
+          <h1 className="font-poppins font-medium text-5xl">{props.title}</h1>
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem className="font-semibold">
@@ -28,7 +32,7 @@ export function Header() {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>Shop</BreadcrumbPage>
+                <BreadcrumbPage>{props.title}</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>

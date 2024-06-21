@@ -9,8 +9,8 @@ import { ServicesBanner } from "@/components/ServicesBanner";
 export function Contact() {
   return (
     <main className="flex flex-col items-center justify-center w-full">
-      <Header />
-      <section className="flex flex-col items-center justify-center font-poppins pt-24 pb-28 gap-3">
+      <Header title="Contact" />
+      <section className="flex flex-col items-center justify-center font-poppins pt-24 pb-28 gap-3 px-3">
         <span className="font-semibold text-4xl">Get In Touch With Us</span>
         <span className="text-gray3 px">
           For More Information About Our Product & Services. Please Feel Free To
@@ -18,8 +18,8 @@ export function Contact() {
           An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
         </span>
       </section>
-      <section className="flex flex-row items-start justify-center font-poppins gap-16 w-full pb-16">
-        <div className="flex flex-col gap-10 w-full max-w-[392px]">
+      <section className="flex flex-col items-center xl:flex-row xl:items-start justify-center font-poppins gap-16 w-full pb-16">
+        <div className="flex flex-col items-center md:flex-row items-start justify-center xl:flex-col gap-10 w-full xl:max-w-[392px] px-3">
           <div className="flex flex-row items-start justify-start gap-8">
             <div className="w-8 items-center justify-center">
               <img src={PinIcon} alt="" />
@@ -60,7 +60,7 @@ export function Contact() {
             </div>
           </div>
         </div>
-        <div className="flex w-full max-w-[528px]">
+        <div className="flex w-full max-w-[528px] px-3">
           <ContactForm />
         </div>
       </section>

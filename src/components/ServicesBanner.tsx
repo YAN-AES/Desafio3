@@ -5,8 +5,8 @@ import VerifiedIcon from "../assets/verifiedicon.png";
 
 export function ServicesBanner() {
   return (
-    <section className="w-full py-24 px-14 bg-beige2">
-      <div className="w-full flex flex-row font-poppins justify-between">
+    <section className="w-full py-24 px-14 bg-beige2 flex flex-col items-center justify-center">
+      <div className="w-full flex flex-col gap-14 xl:gap-0 xl:flex-row font-poppins xl:justify-between">
         <div className="flex flex-row gap-3">
             <img src={TrophyIcon} alt="" />
             <div className="flex flex-col gap-1">

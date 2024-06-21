@@ -9,7 +9,7 @@ import { ShoppingCartButton } from "./shopping-cart";
 
 export function Navbar() {
   return (
-    <nav className="flex w-full py-6 font-medium font-poppins">
+    <nav className="flex w-full py-6 font-medium font-poppins bg-white z-30">
       <div className="flex flex-row items-center justify-between w-full px-16">
         <div className="flex flex-row items-center gap-2">
           <div>

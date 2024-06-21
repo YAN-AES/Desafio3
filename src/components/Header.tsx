@@ -12,8 +12,8 @@ import Bg from "@/assets/headerbg.jpg";
 
 export function Header() {
   return (
-    <header>
-      <div className="flex flex-col w-full relative items-center justify-center h-[316px] gap-4 bg-red-400">
+    <header className="w-full">
+      <div className="flex flex-col w-full relative items-center justify-center h-[316px] gap-4">
         <img
           src={Bg}
           className="absolute left-0 top-0 w-full h-full object-cover z-0"

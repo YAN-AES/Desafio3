@@ -11,6 +11,9 @@ import { AuthForms } from "./form";
 import Logo from "@/assets/logo.png";
 import FacebookIcon from "@/assets/facebook-logo.png"
 import GoogleLogo from "@/assets/google-logo.png"
+import LoginBg from "@/assets/login-bg.jpg"
+import { Header } from "@/components/Header";
+import { ProductHeader } from "@/components/ProductHeader";
 
 export function Login() {
   const handleGoogle = async () => {
@@ -25,8 +28,9 @@ export function Login() {
 
   return (
     <main>
-      <section className="flex flex-col items-center justify-center w-full h-full py-20 max-h-svh">
-        <div className="flex flex-col items-center justify-center gap-4 font-poppins">
+      <section className="flex flex-col items-center justify-center w-full h-full py-20 max-h-svh relative">
+        <img src={LoginBg} alt="" className="absolute left-0 top-0 w-full h-full object-cover z-0 blur-sm"/>
+        <div className="flex flex-col items-center justify-center gap-4 font-poppins z-10 bg-white p-10 rounded-xl">
           <div className="flex flex-row items-center justify-center">
             <div>
               <img src={Logo} alt="" />

@@ -49,7 +49,7 @@ export function CheckoutForm() {
   });
 
   return (
-    <form onSubmit={onSubmit} className="grid max-w-5xl grid-cols-2 grid-rows-1 gap-8 p-4">
+    <form onSubmit={onSubmit} className="grid max-w-5xl md:grid-cols-2 grid-cols-1 grid-rows-1 gap-8 p-4">
       <div className="w-full col-span-1">
         <div className="flex flex-row justify-between gap-8">
           <div className="flex flex-col w-full gap-5">

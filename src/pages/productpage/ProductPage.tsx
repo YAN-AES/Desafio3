@@ -8,6 +8,8 @@ import { Counter } from "@/components/Counter";
 import { ProductHeader } from "@/components/ProductHeader";
 import { Size } from "./size-toggle";
 import { Color } from "./color-toggle";
+import Img from "@/assets/Group 102.svg"
+import { ServicesBanner } from "@/components/ServicesBanner";
 
 export function ProductPage() {
   return (
@@ -15,7 +17,9 @@ export function ProductPage() {
       <ProductHeader></ProductHeader>
       <section className="font-poppins">
         <div className="flex flex-row items-center justify-center gap-20 w-full">
-          <div className="bg-red-500 w-full h-11"></div>
+          <div className="w-full flex items-center justify-center">
+            <img src={Img} alt="" />
+          </div>
           <div className="flex flex-col items-start gap-5 py-8 px-6">
             <span className="text-5xl">Asgaard sofa</span>
             <span className="font-medium text-gray3 text-2xl">
@@ -123,6 +127,9 @@ export function ProductPage() {
           <TabsContent value="add-info"></TabsContent>
           <TabsContent value="reviews"></TabsContent>
         </Tabs>
+      </section>
+      <section className="flex w-full">
+        <ServicesBanner />
       </section>
     </main>
   );

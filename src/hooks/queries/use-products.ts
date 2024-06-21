@@ -8,7 +8,7 @@ import { productSchema } from '@/schemas/product';
 const apiResponse = z.array(productSchema);
 
 async function fetchProducts() {
-  const url = "https://run.mocky.io/v3/241d26ec-f2d5-48c9-85d4-92c49bca2399";
+  const url = "https://run.mocky.io/v3/724b64db-b1c2-4f7d-8cb9-578eeead0f16";
 
   const response = await fetch(url);
 

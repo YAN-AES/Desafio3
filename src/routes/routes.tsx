@@ -5,14 +5,14 @@ import { createBrowserRouter, } from "react-router-dom";
 import { PublicPages } from "@/layout/public-pages";
 
 //* Pages imports
-import { Home } from "@/pages/Home";
-import { Product } from "@/pages/Product";
+import { Home } from "@/pages/home";
 import { Design } from "@/pages/Design";
 import { Checkout } from "@/pages/checkout";
 import { Contact } from "@/pages/contact";
 import { Login } from "@/pages/login/Login";
 import { Shop } from "@/pages/Shop";
-import { Error } from "@/pages/Error";
+import { ErrorPage } from "@/pages/ErrorPage";
+import { ProductPage } from "@/pages/productpage/ProductPage";
 
 const routers = createBrowserRouter([
   {
@@ -25,7 +25,7 @@ const routers = createBrowserRouter([
       },
       {
         path: "product/:id",
-        element: <Product />,
+        element: <ProductPage />,
       },
       {
         path: "design",
@@ -49,7 +49,7 @@ const routers = createBrowserRouter([
       },
       {
         path: "error",
-        element: <Error />,
+        element: <ErrorPage />,
       }
     ]
   },

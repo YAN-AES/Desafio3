@@ -59,6 +59,8 @@
     "@types/bun": "latest"
   },
   "trustedDependencies": [
+    "cypress",
+    "esbuild",
     "protobufjs"
   ],
   "module": "index.ts"

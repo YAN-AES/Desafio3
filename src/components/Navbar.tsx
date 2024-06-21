@@ -62,16 +62,16 @@ export function Navbar() {
                   Furniro.
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className="text-xl hover:scale-105">
+                <DropdownMenuItem className="text-xl font-poppins font-semibold hover:scale-105">
                   <Link to="/home">Home</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="text-xl hover:scale-105">
+                <DropdownMenuItem className="text-xl font-poppins font-semibold hover:scale-105">
                   <Link to="/shop">Shop</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="text-xl hover:scale-105">
+                <DropdownMenuItem className="text-xl font-poppins font-semibold hover:scale-105">
                   <Link to="/error">About</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem className="text-xl hover:scale-105">
+                <DropdownMenuItem className="text-xl font-poppins font-semibold hover:scale-105">
                   <Link to="/contact">Contact</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>

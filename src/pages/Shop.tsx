@@ -19,7 +19,7 @@ export function Shop() {
 
   return (
     <main className="w-full flex flex-col">
-        <Header />
+        <Header title="Shop" />
       <section className="flex flex-col items-center justify-center pt-16 gap-10">
         <div className="flex flex-wrap items-center justify-center max-w-[1323px] w-full gap-8">
           {products.data?.map((product) => {

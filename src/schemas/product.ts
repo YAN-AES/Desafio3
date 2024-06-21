@@ -8,6 +8,8 @@ export const productSchema = z.object({
   description: z.string(),
   image: z.string(),
   stock: z.number(),
+  discount: z.number().optional(),
+  isNew: z.boolean().optional(),
 });
 
 export type Product = z.infer<typeof productSchema>;

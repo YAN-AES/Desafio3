@@ -1,5 +1,6 @@
 //* Libraries imports
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from "react-router-dom";
 
 //* Store imports
 import type { rootReducer } from "@/store/store";
@@ -9,9 +10,11 @@ import { Button } from '@/components/ui/button';
 
 export function Product() {
   const { value, increment, decrement } = useCounter();
+  const params = useParams<{ id: string }>();
+
   return (
     <div>
-      <h1>Product</h1>
+      <h1>Product id = {params.id}</h1>
       <p>Value: {value}</p>
       <Button onPointerDown={increment}>Increment</Button>
       <Button onPointerDown={decrement}>Decrement</Button>
